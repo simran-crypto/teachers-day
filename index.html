@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Teacher's Day!</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f172a, #1e1b4b, #311042);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: #fff;
+      padding: 20px;
+    }
+    .card {
+      text-align: center;
+      padding: 2.5rem 2rem;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      max-width: 500px;
+      width: 100%;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: linear-gradient(90deg, #ec4899, #8b5cf6);
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #ffffff, #cbd5e1);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    .btn {
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 50px;
+      border: none;
+      background: linear-gradient(90deg, #ec4899, #8b5cf6);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(236, 72, 153, 0.4);
+      transition: transform 0.2s ease;
+    }
+    .btn:active { transform: scale(0.95); }
+    #message {
+      display: none;
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      font-style: italic;
+      color: #f1f5f9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="badge">Special Tribute</div>
+    <h1>Happy Teacher's Day!</h1>
+    <p>Thank you for your guidance, encouragement, and dedication to inspiring us every single day.</p>
+    <button class="btn" onclick="revealMessage()">Tap for a Special Note</button>
+    <div id="message">
+      “A good teacher is like a candle—it consumes itself to light the way for others.” <br><br>
+      <strong>— Warm regards from your Students</strong>
+    </div>
+  </div>
+
+  <script>
+    function revealMessage() {
+      const msg = document.getElementById('message');
+      msg.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
